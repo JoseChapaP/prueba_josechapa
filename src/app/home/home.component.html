@@ -1,0 +1,171 @@
+<div class="col-lg-12 col-12 mainContainer">
+
+    <div class="col-lg-12 col-12 title">
+        <nav class="navbar navbar-expand-lg title-main">
+            <h1 class="">Indicadores Económicos</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Expandir Menu">
+              <span class="icon-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="" [routerLink]="['/home']">Listado indicadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://google.cl/" target="_blank">Página banco</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+
+    <div clas="col-lg-12 col-12 indicators">
+
+        <div class="col-lg-12 col-12 indicators_tableIndicators table row" *ngIf="!errorService && !loadingService">
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.bitcoin?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.bitcoin?.nombre}}</strong></p>
+                        <p>{{indicadores.bitcoin?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.dolar?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.dolar?.nombre}}</strong></p>
+                        <p>{{indicadores.dolar?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.dolar_intercambio?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.dolar_intercambio?.nombre}}</strong></p>
+                        <p>{{indicadores.dolar_intercambio?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.euro?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.euro?.nombre}}</strong></p>
+                        <p>{{indicadores.euro?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.imacec?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.imacec?.nombre}}</strong></p>
+                        <p>{{indicadores.imacec?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.ipc?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.ipc?.nombre}}</strong></p>
+                        <p>{{indicadores.ipc?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.ivp?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.ivp?.nombre}}</strong></p>
+                        <p>{{indicadores.ivp?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.ivp?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.ivp?.nombre}}</strong></p>
+                        <p>{{indicadores.ivp?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.libra_cobre?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.libra_cobre?.nombre}}</strong></p>
+                        <p>{{indicadores.libra_cobre?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.tasa_desempleo?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.tasa_desempleo?.nombre}}</strong></p>
+                        <p>{{indicadores.tasa_desempleo?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.tpm?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.tpm?.nombre}}</strong></p>
+                        <p>{{indicadores.tpm?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.uf?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.uf?.nombre}}</strong></p>
+                        <p>{{indicadores.uf?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 indicators_tableIndicators-indicator">
+                <button type="button" class="button button-full" (click)="goTo(indicadores.utm?.codigo)">
+                    <div class="button-content">
+                        <p><strong>{{indicadores.utm?.nombre}}</strong></p>
+                        <p>{{indicadores.utm?.unidad_medida}}</p>
+                    </div>
+                    <span class="icon-arrow-circle-right button-icon"></span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-12 col-12 indicatorDetail indicatorDetail-error" *ngIf="errorService">
+        <p>No es posible obtener los indicadores, intente nuevamente en unos minutos</p>
+    </div>
+
+    <div class="footer">
+        <div class="footer_info">
+            <p>Banco de Chile</p>
+            <p *ngIf="!errorService">Indicadores económicos por {{indicadores?.autor}}</p>
+        </div>
+    </div>
+
+</div>
