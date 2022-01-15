@@ -1,27 +1,35 @@
-# PruebaTecnica
+# Prueba técnica.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+Para probar este repositorio:
 
-## Development server
+1. Clonar este repositorio en local:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```console
+git clone https://github.com/JoseChapaP/prueba_josechapa.git
+```
 
-## Code scaffolding
+2. Entra en el directorio del proyecto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```console
+cd prueba-tecnica
+```
 
-## Build
+3. Instala las dependencias:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```console
+npm install
+```
 
-## Running unit tests
+4. Lanza el servidor para ver la aplicación en http://localhost:4200/:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```console
+ng serve
+```
 
-## Running end-to-end tests
+La página principal cargara el listado de Indicadores económicos disponibles
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. puede simular errores en los servicios cambiando la url de la API en el archivo Services/indicadores.service.ts:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```console
+por ejemplo https://mindicador.cl/api/ cambiar a https://mindicador.cl/api2/
+```
