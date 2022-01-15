@@ -9,15 +9,13 @@ import { DetalleComponent } from './home/detalle/detalle.component';
 import { registerLocaleData} from '@angular/common';
 
 import localeEs from '@angular/common/locales/es';
-import { ErrorsComponent } from './errors/errors.component';
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetalleComponent,
-    ErrorsComponent
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
