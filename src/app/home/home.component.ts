@@ -20,15 +20,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
 
+    this.getAll();
 
+  }
+
+  private getAll(){
     this.indicators.getAllIndicator().subscribe((data) => {
       if(data){
         this.loadingService = false;
       }
       this.indicadores = data;
     }, err=> this.errorService = true);
-
-  }
+  };
 
   public goTo(code: string){
     this.route.navigate(['detalle', {code: code}]);

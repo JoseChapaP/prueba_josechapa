@@ -38,26 +38,28 @@ export class DetalleComponent implements OnInit {
         this.loadingService = false;
       }
       this.indicator = data;
-      this.setMeasure(this.indicator.unidad_medida);
+      this.indicatorMeasure = this.setMeasure(this.indicator.unidad_medida);
       console.log(this.indicator);
     }, err=> this.errorService = true)
   }
 
   public setMeasure(measure: string){
+    let tempMeasure: string = '';
     switch (measure){
       case 'Dólar':
-         this.indicatorMeasure = "USD$";
+        tempMeasure = "USD$";
          break;
       case 'Pesos':
-        this.indicatorMeasure = "$";
+        tempMeasure = "$";
         break;
       case 'Porcentaje':
-        this.indicatorMeasure =  "%";
+        tempMeasure =  "%";
         break;
       default:
-        this.indicatorMeasure = '';
+        tempMeasure = '';
         break
     }
+    return tempMeasure;
   }
 
 }
