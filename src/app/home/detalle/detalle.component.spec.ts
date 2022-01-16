@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetalleComponent } from './detalle.component';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { IndicadoresService } from 'src/app/Services/indicadores.service';
 
 describe('DetalleComponent', () => {
   let component: DetalleComponent;
@@ -8,7 +11,9 @@ describe('DetalleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetalleComponent ]
+      declarations: [ DetalleComponent ],
+      imports: [IndicadoresService, ActivatedRoute ],
+      providers:[ HttpClient]
     })
     .compileComponents();
   });
